@@ -1,0 +1,4 @@
+<div class="card">
+  <app-active-state *ngIf="!showThankYouMessage"></app-active-state>
+  <app-thank-you-state *ngIf="showThankYouMessage" [value]="showThankYouMessage"></app-thank-you-state>
+</div>

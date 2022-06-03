@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <div class="card__star">
+    <img src="./assets/images/icon-star.svg" alt="" />
+  </div>
+  <h2 class="card__title">How Did we do?</h2>
+  <p class="card__description">
+    Please let us know how we did with your support request. All feedback is
+    appreciated to help us improve our offering!
+  </p>
+  <div class="card__rating">
+    <div class="rating__wrapper" *ngFor="let num of [1, 2, 3, 4, 5]">
+      <input
+        class="rating__radio"
+        name="rating"
+        type="radio"
+        value="{{ num }}"
+        [id]="num"
+        ngModel
+        required
+      />
+      <label class="rating__number" [for]="num">{{ num }}</label>
+    </div>
+  </div>
+  <button class="card__button" type="submit">Submit</button>
+</form>

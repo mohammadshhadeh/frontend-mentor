@@ -1,0 +1,57 @@
+.card__star {
+    background-color: hsl(214, 14%, 23%);
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+}
+
+.card__rating {
+    color: hsl(217, 12%, 63%);
+    display: grid;
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    grid-gap: 24px;
+}
+
+.rating__number {
+    background-color: hsl(214, 14%, 23%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-block: 8px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(25, 97%, 53%);
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+.rating__radio {
+    display: none;
+
+    &:checked + .rating__number {
+        background-color: hsl(25, 97%, 53%);
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+.card__button {
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 16px;
+    text-align: center;
+    padding-block: 12px;
+    width: 100%;
+    margin-top: 12px;
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+
+    &:hover {
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(25, 97%, 53%);
+    }
+}
